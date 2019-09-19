@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "12.10.0",
+    "node": "11.14.0",
     "npm": "6.10.3"
   },
   "scripts": {
