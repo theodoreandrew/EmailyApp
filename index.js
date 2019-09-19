@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send({ hi: "there" });
-  console.log(req);
+  res.send({ hello: "world" });
 });
 
 // If we run in Heroku, it will use process.env.PORT
