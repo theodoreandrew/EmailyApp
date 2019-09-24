@@ -14,8 +14,10 @@ passport.use(
       clientSecret: keys.googleClientSecret,
       callbackURL: "/auth/google/callback"
     },
-    accessToken => {
-      console.log(accessToken);
+    (accessToken, refreshToken, profile, done) => {
+      console.log("access token:", accessToken);
+      console.log("refresh token:", refreshToken);
+      console.log("profile", profile);
     }
   )
 );
@@ -30,6 +32,11 @@ app.get(
     scope: ["profile", "email"]
   })
 );
+
+/**
+ * This route handler has the code to be exchanged with user's profile.
+ */
+app.get("/auth/google/callback", passport.authenticate("google"));
 
 // If we run in Heroku, it will use process.env.PORT
 // If we run it locally, it will be defaulted to port 5000
