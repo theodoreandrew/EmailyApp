@@ -1,6 +1,6 @@
 # EmailyApp
 
 Technologies used:
-- FrontEnd : React, Redux
-- BackEnd : Express, Node.JS
+- FrontEnd : React, Redux, Materialize
+- BackEnd : JavaScript, Express, Node.JS, REST API, PassportJS, Stripe API
 - Database : MongoDB
